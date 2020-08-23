@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+
+<style>
+    body {
+        margin-left: 30%;
+        color: white;
+        background-color: black;
+    }
+
+    table,
+    tr,
+    td,
+    th {
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <img src="" id="image" style="height: 300px; width: auto;">
+    <h3 id="desc"></h3>
+
+    <button id="gen">Randomize</button>
+
+
+    <h1>Frequency</h1>
+    <table>
+        <tr>
+            <th>Frodo</th>
+            <th>Aragorn</th>
+            <th>Gandalf</th>
+            <th>Sauron</th>
+            <th>Legolas</th>
+        </tr>
+        <tr>
+            <td id="1">0</td>
+            <td id="2">0</td>
+            <td id="3">0</td>
+            <td id="4">0</td>
+            <td id="5">0</td>
+        </tr>
+    </table>
+
+    <script>
+        let n = {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+        }
+
+        let texts = [
+            "Frodo",
+            "Aragorn",
+            "Gandalf",
+            "Sauron",
+            "Legolas"
+        ]
+
+        let images = [
+            "https://giantbomb1.cbsistatic.com/uploads/scale_small/3/39164/1245387-untitled_1.png",//frodo
+            "https://external-preview.redd.it/fQv070ug4u7yeXd9FTNyN6MMtuk3uJYXTHP5PT7MRuI.jpg?auto=webp&s=5e46fdc1b126d4063389676171e43e0990736147",//aragorn
+            "https://vignette.wikia.nocookie.net/lotr/images/e/e7/Gandalf_the_Grey.jpg/revision/latest/top-crop/width/360/height/450?cb=20121110131754",//gandalf
+            "https://vignette.wikia.nocookie.net/middleearthshadowofmordor7723/images/6/64/SauronTheBrightLordMissionImage.jpg/revision/latest?cb=20180326151346",//sauron
+            "https://vignette.wikia.nocookie.net/lotr/images/3/33/Legolas_-_in_Two_Towers.PNG/revision/latest?cb=20120916035151"//legolas
+        ]
+
+        let load = Math.floor(Math.random() * 5)
+        document.getElementById("desc").innerText = texts[load]
+        document.getElementById("image").src = images[load]
+        document.getElementById(String(load + 1)).innerText = "1"
+
+        document.getElementById("gen").addEventListener("click", function (e) {
+            let rand = Math.floor(Math.random() * 5)
+            if (document.getElementById(String(rand + 1)).innerText == "0") {
+                document.getElementById(String(rand + 1)).innerText = "1"
+                n[String(rand + 1)] = 1
+            } else {
+                document.getElementById(String(rand + 1)).innerText = String(parseInt(document.getElementById(String(rand + 1)).innerText) + 1)
+                n[String(rand + 1)] = parseInt(document.getElementById(String(rand + 1)).innerText) + 1
+            }
+            document.getElementById('desc').innerText = texts[rand]
+            document.getElementById("image").src = images[rand]
+
+            e.preventDefault()
+        })
+    </script>
+</body>
+
+</html>
