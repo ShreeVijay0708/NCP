@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<style>
+    .outerdiv {
+        margin: 30px;
+    }
+</style>
+
+<body onload="loaded()">
+    <h1 style="text-align: center;">Form</h1>
+
+
+    <div class="outerdiv">
+        <form action="" id="formdata">
+            <h4>Student Details</h4>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="firstname" id="firstnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="First name" id="firstname" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="firstname" id="middlenamelabel"></label>
+                    <input type="text" class="form-control" placeholder="Middle name" id="middlename" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="firstname" id="lastnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="Last name" id="lastname" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="school10name" id="school10namelabel"></label>
+                    <input type="text" class="form-control" placeholder="10th School Name" id="school10name" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="school10reg" id="school10reglabel"></label>
+                    <input type="text" class="form-control" placeholder="Reg No." id="school10reg" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="school10marks" id="school10markslabel"></label>
+                    <input type="number" class="form-control" placeholder="Marks" id="school10marks" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="school12name" id="school12namelabel"></label>
+                    <input type="text" class="form-control" placeholder="12th School Name" id="school12name" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="school12reg" id="school12reglabel"></label>
+                    <input type="text" class="form-control" placeholder="Reg No." id="school12reg" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="school12marks" id="school12markslabel"></label>
+                    <input type="number" class="form-control" placeholder="Marks" id="school12marks" required />
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1" checked/>
+                    <label class="form-check-label" for="inlineRadio1">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2" />
+                    <label class="form-check-label" for="inlineRadio2">Female</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2" />
+                    <label class="form-check-label" for="inlineRadio2">Other</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="dateofbirth">Date of Birth</label>
+                    <select id="dateofbirth" class="form-control"></select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="monthofbirth">Month of Birth</label>
+                    <select class="form-control" id="monthofbirth"></select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="yearofbirth">Year of Birth</label>
+                    <select class="form-control" id="yearofbirth"></select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="occupation">Parent Occupation</label>
+                    <select class="form-control" id="occupation">
+                        <option value="occupation 1">Occ 1</option>
+                        <option value="occupation 2">Occ 2</option>
+                        <option value="occupation 3">Occ 3</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="religion">Religion</label>
+                    <select class="form-control" id="religion">
+                        <option value="">Choose Religion</option>
+                        <option value="calm">Rel 1</option>
+                        <option value="panic">Rel 2</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="nationality">Nationality</label>
+                    <select class="form-control" id="nationality">
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="England">England</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <input type="text" class="form-control" id="dateofbirth" placeholder="Identity marks" />
+                </div>
+            </div>
+            <h4>Permanent Address</h4>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="hnoandname" id="hnoandnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="House number and name" id="hnoandname"
+                        required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="snoandname" id="snoandnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="Street number and name" id="snoandname"
+                        required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="locality" id="localitylabel"></label>
+                    <input type="text" class="form-control" placeholder="Locality" id="locality" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="city" id="citylabel"></label>
+                    <input type="text" class="form-control" placeholder="City" id="city" required />
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="state" id="statelabel"></label>
+                    <input type="text" class="form-control" placeholder="State" id="state" required />
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="country" id="countrylabel"></label>
+                    <select class="form-control" id="country" >
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="England">England</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="pin" id="pinlabel"></label>
+                    <input type="number" class="form-control" placeholder="Zip Code" id="pin" required />
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="permanentcomm"
+                    onclick="copyPermanentToComm()" />
+                <label class="form-check-label" for="permanentcomm">
+                    Communication address is same as Permanent address
+                </label>
+            </div>
+
+            <h4>Communication Address</h4>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="chnoandname" id="chnoandnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="House number and name" id="chnoandname"
+                        required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="csnoandname" id="csnoandnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="Street number and name" id="csnoandname"
+                        required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="clocality" id="clocalitylabel"></label>
+                    <input type="text" class="form-control" placeholder="Locality" id="clocality" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="ccity" id="ccitylabel"></label>
+                    <input type="text" class="form-control" placeholder="City" id="ccity" required />
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="cstate" id="cstatelabel"></label>
+                    <input type="text" class="form-control" placeholder="State" id="cstate" required />
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="ccountry" id="ccountrylabel"></label>
+                    <select class="form-control" id="ccountry">
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="England">England</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="cpin" id="cpinlabel"></label>
+                    <input type="number" class="form-control" placeholder="Zip Code" id="cpin" required />
+                </div>
+            </div>
+
+
+            <h4>Parent Details</h4>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="pfirstname" id="pfirstnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="First name" id="pfirstname" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="pmiddlename" id="pmiddlenamelabel"></label>
+                    <input type="text" class="form-control" placeholder="Middle name" id="pmiddlename" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="plastname" id="plastnamelabel"></label>
+                    <input type="text" class="form-control" placeholder="Last name" id="plastname" required />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="email" id="emaillabel"></label>
+                    <input type="text" class="form-control" id="email" placeholder="Email" onchange="validateemail()" onkeyup="validateemail()" />
+                </div>
+                <div class="form-group col-xs-1">
+                    <label for="at" id="atlabel"></label>
+                    <span class="input-group-text" id="at">@</span>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="domain" id="domainlabel"></label>
+                    <input type="text" class="form-control rounded-right" id="domain" onchange="validatedomain()" onkeyup="validatedomain()"/>
+                </div>
+            </div>
+
+            
+            
+
+        </form><button class="btn btn-primary" onclick="printformdata()">Submit Form</button>
+    </div>
+
+
+
+    <!-- Javascript Part -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        function loaded() {
+            months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            dayob = "<option value=\" \">Choose Day</option>\n"
+            mob = "<option value=\" \">Choose Month </option>\n"
+            yob = "<option value=\" \">Choose Year </option>\n"
+            for (var i = 1; i <= 31; i++) {
+                dayob += "<option value=" + i + ">" + i + "</option>\n"
+            }
+            for (var i = 0; i <= months.length; i++) {
+                mob += "<option value=" + months[i] + ">" + months[i] + "</option>\n"
+            }
+            for (var i = 1970; i <= new Date().getFullYear(); i++) {
+                yob += "<option value=" + i + ">" + i + "</option>\n"
+            }
+            document.getElementById('dateofbirth').innerHTML = dayob
+            document.getElementById('monthofbirth').innerHTML = mob
+            document.getElementById('yearofbirth').innerHTML = yob
+        }
+
+        function validateform(id) {
+            if (id.value == "" || id.value == undefined || id.value == null) {
+                document.getElementById(id.id + "label").innerText = "Required field"
+                document.getElementById(id.id + "label").style.color = "#FF0000"
+            }
+            else {
+                document.getElementById(id.id + "label").innerText = ""
+            }
+        }
+
+        function printformdata()
+        {
+            elemnts=document.getElementById("formdata").elements
+            for(var i=0;i<elemnts.length;i++)
+            {
+                console.log(document.getElementById(elemnts[i].id).value);
+            }
+        }
+
+
+        function copyPermanentToComm() {
+            if (document.getElementById("permanentcomm").checked == true) {
+                document.getElementById('chnoandname').value = document.getElementById('hnoandname').value
+                document.getElementById('chnoandname').disabled = true
+                document.getElementById('csnoandname').value = document.getElementById('snoandname').value
+                document.getElementById('csnoandname').disabled = true
+                document.getElementById('clocality').value = document.getElementById('locality').value
+                document.getElementById('clocality').disabled = true
+                document.getElementById('cstate').value = document.getElementById('state').value
+                document.getElementById('cstate').disabled = true
+                document.getElementById('ccity').value = document.getElementById('city').value
+                document.getElementById('ccity').disabled = true
+                document.getElementById('cpin').value = document.getElementById('pin').value
+                document.getElementById('cpin').disabled = true
+                
+                document.getElementById('ccountry').value = document.getElementById('country').value
+                document.getElementById('ccountry').disabled = true
+            }
+            else {
+                document.getElementById('chnoandname').value = ""
+                document.getElementById('chnoandname').disabled = false
+                document.getElementById('csnoandname').value = ""
+                document.getElementById('csnoandname').disabled = false
+                document.getElementById('clocality').value = ""
+                document.getElementById('clocality').disabled = false
+                document.getElementById('cstate').value = ""
+                document.getElementById('cstate').disabled = false
+                document.getElementById('ccity').value = ""
+                document.getElementById('ccity').disabled = false
+                document.getElementById('cpin').value = ""
+                document.getElementById('cpin').disabled = false
+                
+                document.getElementById('ccountry').value = "India"
+                document.getElementById('ccountry').disabled = false
+            }
+
+        }
+
+        function validateemail()
+        {
+            var usernameRegex = /^[a-zA-Z0-9]+$/;
+            var email = document.getElementById("email").value
+            if(email == "" ||!email.match(usernameRegex) )
+            {
+                 document.getElementById("emaillabel").innerText="Enter valid email"
+                 document.getElementById("emaillabel").style.color="#ff0000"
+            }
+            else{
+                document.getElementById("emaillabel").innerText = ""
+            }
+            
+        }
+
+        function validatedomain() {
+                var usernameRegex = /([a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})$/
+                var email = document.getElementById("domain").value
+                if (email == "" || !email.match(usernameRegex)) {
+                    document.getElementById("domainlabel").innerText = "Enter valid domain"
+                    document.getElementById("domainlabel").style.color = "#ff0000"
+                }
+                else {
+                    document.getElementById("domainlabel").innerText = ""
+                }
+
+            }
+    </script>
+</body>
+
+</html>
